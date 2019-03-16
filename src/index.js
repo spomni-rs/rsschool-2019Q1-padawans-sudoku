@@ -43,21 +43,16 @@ function solveSudoku(matrix){
   return null;
 }
 
-/** Object implementation of the sudoku.
- * @class Sudoku
- */
 class Sudoku {
 
-  /**Creates an instance of Sudoku.
+  /** Creates an object implementation of the sudoku.
    * @param {number[][]} matrix - Inital matix.
-   * @memberof Sudoku
    */
   constructor(matrix){
 
     // Fill the sudoku cells.
-    /**
-     * @member {Cell[]} 0..matrix.length
-     * @memberof Suroku
+    /** The Sudoku instance have 9 members named from 0 to 8. Every member is an array of the cells.
+     * @member {Cell[]} Sudoku#0-8
      */
     matrix.forEach((row, rowNum, matrix) => {
       this[rowNum] = [];
@@ -68,14 +63,12 @@ class Sudoku {
     })
 
     /** Indicates whether sudoku is solved or not.
-     * @type {boolean}
-     * @memberof Sudoku
+     * @member {boolean} Sudoku#isSolved
      */
     this.isSolved = false;
 
     /** Indicates whether sudoku has solution or not.
-     * @type {boolean}
-     * @memberof Sudoku
+     * @member {boolean} Sudoku#hasSolution
      */
     this.hasSolution = true;
   }
@@ -294,24 +287,18 @@ class Sudoku {
 }
 
 
-/**
- * Object implementation of the sudoku cell.
- *
- * @class Cell
- */
 class Cell {
 
   /**
-   * Creates an instance of Cell.
+   * Creates an object implementation of the sudoku cell.
    * @param {number} value - Value of the cell. If the value equal to 0, the cell is empty.
-   * @memberof Cell
    */
   constructor(value, rowNum, colNum){
 
     /**
      * Value of the cell.
      *
-     * @type {number|null}
+     * @member {number|null} Cell#value
      *
      * @memberof Cell
      */
@@ -321,27 +308,21 @@ class Cell {
      * The array of the allowed values of this cell.
      * It is null if the cell value is set.
      *
-     * @type {number[]|null}
-     *
-     * @memberof Cell
+     * @member {number[]|null} Cell#canBe
      */
     this.canBe = null;
 
     /**
      * The index of cell row
      *
-     * @type {number}
-     *
-     * @memberof Cell
+     * @member {number} Cell#rowNum
      */
     this.rowNum = rowNum;
 
     /**
      * The index of cell column
      *
-     * @type {number}
-     *
-     * @memberof Cell
+     * @member {number} Cell#colNum
      */
     this.colNum = colNum;
 
