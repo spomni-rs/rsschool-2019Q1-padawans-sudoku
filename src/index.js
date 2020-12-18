@@ -4,7 +4,6 @@ module.exports = solveSudoku;
  * Solve sudoku matrix.
  *
  * @param {number[][]} matrix
- *
  * @returns {number[][]}
  */
 function solveSudoku(matrix){
